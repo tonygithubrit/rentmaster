@@ -1,0 +1,44 @@
+.home-page {
+  min-height: 100vh;
+  background-color: #0f172a; /* slate-900 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  color: #f8fafc;
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.home-page .highlight {
+  color: #3b82f6; /* blue-500 */
+}
+
+.subtitle {
+  color: #94a3b8; /* slate-400 */
+  font-size: 1rem;
+}
+
+.role-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1150px;
+  margin-top: 48px;
+}
+
+.footer {
+  margin-top: 48px;
+  font-size: 0.875rem;
+  color: #64748b; /* slate-600 */
+}
+
+.footer strong {
+  color: #60a5fa; /* blue-400 */
+}

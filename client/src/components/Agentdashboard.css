@@ -1,0 +1,245 @@
+.agent-dashboard {
+  padding: 24px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.agent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.agent-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.agent-subtitle {
+  color: #64748b;
+  margin: 0;
+  font-size: 14px;
+}
+
+.agent-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.new-listing-btn {
+  background-color: #0f172a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-listing-btn:hover {
+  background-color: #1e293b;
+}
+
+.agent-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.agent-stat-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.agent-stat-label {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.agent-stat-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.agent-stat-value {
+  font-size: 30px;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0;
+}
+
+.agent-stat-change {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.agent-stat-change.positive {
+  color: #10b981;
+}
+
+.agent-stat-change.neutral {
+  color: #94a3b8;
+}
+
+.agent-main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .agent-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.agent-chart-section {
+  background-color: white;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.chart-header-title {
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0;
+  font-size: 16px;
+}
+
+.chart-select {
+  background-color: #f8fafc;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: #64748b;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.agent-chart-wrapper {
+  height: 256px;
+}
+
+.hot-leads-section {
+  background-color: white;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hot-leads-title {
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0 0 24px 0;
+  font-size: 16px;
+}
+
+.hot-leads-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hot-lead-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.hot-lead-item:hover {
+  background-color: #f8fafc;
+  border-color: #f1f5f9;
+}
+
+.lead-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #f3e8ff;
+  color: #9333ea;
+  font-weight: bold;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lead-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lead-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lead-details {
+  font-size: 10px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.lead-time {
+  font-size: 10px;
+  color: #94a3b8;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.view-all-leads-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #9333ea;
+  background-color: #faf5ff;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-all-leads-btn:hover {
+  background-color: #f3e8ff;
+}

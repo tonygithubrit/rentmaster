@@ -1,0 +1,61 @@
+.role-card {
+  background-color: #1e293b; /* slate-800 */
+  border: 1px solid #334155; /* slate-700 */
+  border-radius: 24px; /* rounded-3xl */
+  padding: 32px;
+  text-align: left;
+  transition: all 0.25s ease;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.role-card:hover {
+  transform: scale(1.02);
+  border-color: #3b82f6; /* blue-500 */
+}
+
+.role-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #334155; /* slate-700 */
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  transition: background-color 0.25s ease;
+}
+
+.role-card:hover .role-icon {
+  background-color: rgba(37, 99, 235, 0.2); /* blue-600/20 */
+}
+
+.role-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  transition: color 0.25s ease;
+}
+
+.role-card:hover h3 {
+  color: #60a5fa; /* blue-400 */
+}
+
+.role-card p {
+  color: #94a3b8; /* slate-400 */
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.access-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #3b82f6; /* blue-500 */
+  pointer-events: none;
+}

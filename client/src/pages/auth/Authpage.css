@@ -1,0 +1,214 @@
+.auth-bg {
+  min-height: 100vh;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.auth-blob {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.auth-blob.blue {
+  background: rgba(37, 99, 235, 0.2);
+  top: -20%;
+  left: -10%;
+}
+
+.auth-blob.purple {
+  background: rgba(168, 85, 247, 0.2);
+  bottom: -20%;
+  right: -10%;
+}
+
+.auth-wrapper {
+  max-width: 460px;
+  width: 100%;
+  z-index: 2;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.auth-header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.auth-header h1 span {
+  color: #2563eb;
+}
+
+.auth-header p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+input,
+select {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.access-code-field input {
+  width: 90%; 
+}
+.role-toggle {
+  display: flex;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+}
+
+.role-toggle button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.role-toggle .active {
+  background: white;
+  color: #2563eb;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn {
+  background: #2563eb;
+  color: white;
+  padding: 16px;
+  border-radius: 18px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.auth-switch span {
+  color: #2563eb;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.auth-footer {
+  margin-top: 12px;
+  padding: 16px;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #94a3b8;
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  border: 1px solid #fecaca;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state for submit button */
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success message (optional - can be used later) */
+.success-message {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  border: 1px solid #6ee7b7;
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Info message (optional - can be used later) */
+.info-message {
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  border: 1px solid #93c5fd;
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Access Code Field */
+.access-code-field {
+  width: 100%;
+}
+
+.access-code-field input {
+  margin-bottom: 4px;
+}
+
+.field-help {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 12px;
+  font-style: italic;
+  line-height: 1.4;
+}

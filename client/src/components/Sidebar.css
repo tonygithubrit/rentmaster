@@ -1,0 +1,280 @@
+/* ========== SIDEBAR BASE STYLES ========== */
+.sidebar {
+  width: 256px;
+  background-color: #0f172a;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-header {
+  padding: 24px;
+  border-bottom: 1px solid #1e293b;
+  position: relative;
+}
+
+.sidebar-title {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.brand-rent {
+  color: #3b82f6;
+}
+
+.sidebar-badge {
+  margin-top: 8px;
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #1e293b;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 16px;
+  margin-top: 16px;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.sidebar-nav-item {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.sidebar-nav-item:hover {
+  background-color: #1e293b;
+  color: white;
+}
+
+.sidebar-nav-item.active {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.5);
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+.nav-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #1e293b;
+}
+
+.logout-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.logout-button:hover {
+  color: #f43f5e;
+}
+
+.copyright {
+  color: #475569;
+  font-size: 10px;
+  font-weight: 500;
+  padding-left: 16px;
+}
+
+/* ========== HAMBURGER MENU BUTTON ========== */
+.hamburger-menu {
+  display: none; /* Hidden by default, shown on mobile */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  background-color: #0f172a;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s;
+}
+
+.hamburger-menu:hover {
+  background-color: #1e293b;
+}
+
+/* .hamburger-menu:active {
+  transform: scale(0.95);
+} */
+
+.hamburger-line {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when open */
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5.5px, 5.5px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5.5px, -5.5px);
+}
+
+/* ========== OVERLAY (MOBILE) ========== */
+.sidebar-overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hamburger-line.open:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger-line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========== MOBILE STYLES (768px and below) ========== */
+@media (max-width: 768px) {
+  /* Show hamburger menu */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Hide sidebar by default on mobile */
+  .sidebar.mobile-closed {
+    transform: translateX(-100%);
+  }
+
+  /* Show sidebar when menu is open */
+  .sidebar.mobile-open {
+    transform: translateX(0);
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Show overlay when menu is open */
+  .sidebar-overlay {
+    display: block;
+  }
+
+  /* Show close button on mobile */
+  .close-sidebar-btn {
+    display: block;
+  }
+
+  /* Make sidebar full height on mobile */
+  .sidebar {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  }
+}
+
+/* ========== TABLET STYLES (769px to 1024px) ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .sidebar-title {
+    font-size: 18px;
+  }
+
+  .nav-label {
+    font-size: 13px;
+  }
+}
+
+/* ========== SMALL MOBILE (480px and below) ========== */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 280px; /* Slightly wider for better touch targets */
+  }
+
+  .sidebar-nav-item {
+    padding: 14px 16px; /* Larger touch targets */
+  }
+
+  .hamburger-menu {
+    top: 16px;
+    left: 16px;
+  }
+}

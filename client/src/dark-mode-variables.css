@@ -1,0 +1,140 @@
+/* ========== CSS VARIABLES FOR LIGHT/DARK MODE ========== */
+
+:root {
+  /* Light Mode (Default) */
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #eff6ff;
+  --primary-focus: rgba(59, 130, 246, 0.1);
+  --primary-shadow: rgba(37, 99, 235, 0.2);
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --card-bg: #ffffff;
+  --hover-bg: #f1f5f9;
+  --disabled-bg: #f1f5f9;
+  --input-bg: #f8fafc;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-tertiary: #94a3b8;
+  
+  --border-color: #e2e8f0;
+  --divider-color: #f1f5f9;
+  
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #3b82f6;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-light: #1e3a8a;
+  --primary-focus: rgba(59, 130, 246, 0.2);
+  --primary-shadow: rgba(59, 130, 246, 0.3);
+  
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --card-bg: #1e293b;
+  --hover-bg: #334155;
+  --disabled-bg: #334155;
+  --input-bg: #334155;
+  
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+  
+  --border-color: #334155;
+  --divider-color: #475569;
+  
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hover-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+  --info-color: #60a5fa;
+}
+
+/* Apply dark mode to body and main containers */
+.dark-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.dark-mode .dashboard-layout {
+  background-color: var(--bg-primary);
+}
+
+.dark-mode .dashboard-main {
+  background-color: var(--bg-primary);
+}
+
+.dark-mode .dashboard-content {
+  background-color: var(--bg-primary);
+}
+
+.dark-mode .dashboard-header {
+  background-color: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+}
+
+/* Make all text and backgrounds respect dark mode */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+  color: var(--text-primary);
+}
+
+.dark-mode p {
+  color: var(--text-secondary);
+}
+
+/* Cards and containers */
+.dark-mode .card,
+.dark-mode .property-card,
+.dark-mode .result-card,
+.dark-mode .tool-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+/* Inputs */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: var(--input-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Buttons */
+.dark-mode button:not(.btn-primary):not(.save-btn):not(.edit-btn):not(.transfer-btn) {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.dark-mode button:hover {
+  background-color: var(--hover-bg);
+}
+
+/* Smooth transition for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

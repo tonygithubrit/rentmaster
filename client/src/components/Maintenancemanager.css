@@ -1,0 +1,379 @@
+.maintenance-manager {
+  padding: 24px;
+}
+
+.maintenance-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.requests-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.request-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: border-color 0.2s;
+}
+
+.request-card:hover {
+  border-color: #93c5fd;
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.request-property {
+  font-weight: bold;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  font-size: 16px;
+}
+
+.request-issue {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.priority-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.priority-high {
+  background-color: #ffe4e6;
+  color: #9f1239;
+}
+
+.priority-normal {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.request-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.request-meta {
+  display: flex;
+  gap: 16px;
+}
+
+.meta-item {
+  font-size: 12px;
+}
+
+.meta-label {
+  color: #94a3b8;
+}
+
+.meta-value {
+  color: #334155;
+  font-weight: 500;
+}
+
+.request-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ai-analyze-btn,
+.mark-done-btn {
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.ai-analyze-btn {
+  color: #2563eb;
+}
+
+.ai-analyze-btn:hover:not(:disabled) {
+  color: #1d4ed8;
+}
+
+.ai-analyze-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mark-done-btn {
+  color: #64748b;
+}
+
+.mark-done-btn:hover {
+  color: #0f172a;
+}
+
+/* Analysis Panel */
+.analysis-panel {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 24px;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+}
+
+.analysis-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.analysis-item {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.priority-item {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.severity-item {
+  background-color: #f8fafc;
+  border-color: #f1f5f9;
+}
+
+.recommendation-item {
+  background-color: #d1fae5;
+  border-color: #6ee7b7;
+}
+
+.analysis-label {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 0 4px 0;
+}
+
+.priority-item .analysis-label {
+  color: #1e40af;
+}
+
+.severity-item .analysis-label {
+  color: #475569;
+}
+
+.recommendation-item .analysis-label {
+  color: #047857;
+}
+
+.analysis-value {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.priority-item .analysis-value {
+  color: #1e3a8a;
+}
+
+.analysis-text {
+  font-size: 14px;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.analysis-subtext {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+.trade-name {
+  font-weight: bold;
+  color: #334155;
+}
+
+.analysis-quote {
+  font-size: 14px;
+  color: #065f46;
+  font-style: italic;
+  margin: 0;
+}
+
+.clear-btn {
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #94a3b8;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.clear-btn:hover {
+  color: #64748b;
+}
+
+.analysis-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 48px;
+  filter: grayscale(1);
+  opacity: 0.2;
+  margin-bottom: 16px;
+}
+
+.empty-text {
+  color: #94a3b8;
+  font-size: 14px;
+  padding: 0 24px;
+  margin: 0;
+}
+
+/* Stats Summary */
+.stats-summary {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--background-secondary, #f8fafc);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-secondary, #64748b);
+}
+
+.stat-item strong {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+}
+
+/* Request Card Body */
+.request-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.request-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+}
+
+.request-detail .detail-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  display: block;
+  width: 100%;
+}
+
+.request-detail .detail-value {
+  font-size: 14px;
+  color: #334155;
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-open { background-color: #fef9c3; color: #854d0e; }
+.status-in-progress { background-color: #dbeafe; color: #1e40af; }
+.status-completed { background-color: #d1fae5; color: #065f46; }
+.status-cancelled { background-color: #f1f5f9; color: #64748b; }
+.priority-urgent { background-color: #fee2e2; color: #991b1b; }
+.priority-low { background-color: #f0fdf4; color: #166534; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .maintenance-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .maintenance-manager {
+    padding: 16px;
+  }
+
+  .request-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .request-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
