@@ -84,8 +84,8 @@ export default function LandingPage() {
                 {id === "how-it-works" ? "How It Works" : id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
             ))}
-            <a href="/login" style={{ ...s.mobileLink, textDecoration: "none" }}>Login</a>
-            <a href="/register" style={{ ...s.mobileLink, color: "#3b82f6", fontWeight: 700, textDecoration: "none" }}>Get Started →</a>
+            <a href="/get-started" style={{ ...s.mobileLink, textDecoration: "none" }}>Login</a>
+            <a href="/get-started" style={{ ...s.mobileLink, color: "#3b82f6", fontWeight: 700, textDecoration: "none" }}>Get Started →</a>
           </div>
         )}
       </nav>
