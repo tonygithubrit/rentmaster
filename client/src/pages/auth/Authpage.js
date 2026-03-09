@@ -85,13 +85,13 @@ const AuthPage = () => {
         }
       }
 
-      if (role === "agent") {
-        if (!formData.licenseNumber || formData.licenseNumber.trim() === "") {
-          setError("Real Estate License Number is required for Property Manager");
-          setIsLoading(false);
-          return;
-        }
-      }
+      // if (role === "agent") {
+      //   if (!formData.licenseNumber || formData.licenseNumber.trim() === "") {
+      //     setError("Real Estate License Number is required for Property Manager");
+      //     setIsLoading(false);
+      //     return;
+      //   }
+      // }
     }
 
     try {
