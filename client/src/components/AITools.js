@@ -99,7 +99,7 @@ const AITools = () => {
     <div className="ai-tools">
       <div className="ai-tools-header">
         <h2 className="page-title">✨ AI Insights & Tools</h2>
-        <p className="page-subtitle">Powered by Gemini AI — your smart property management assistant</p>
+        <p className="page-subtitle">Powered by RentMaster AI — your smart property management assistant</p>
       </div>
 
       <div className="tools-grid">

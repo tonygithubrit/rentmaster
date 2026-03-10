@@ -30,7 +30,7 @@ const HomePage = () => {
         />
       </div>
 
-      <p className="footer">Enterprise features powered by <strong>Gemini AI</strong></p>
+      <p className="footer">Enterprise features powered by <strong>RentMaster AI</strong></p>
     </div>
   );
 };

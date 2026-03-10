@@ -5,7 +5,7 @@ import './Verificationbanner.css';
 const VerificationBanner = ({ onVerified }) => {
   const [expanded, setExpanded] = useState(false);
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
-  const [timeLeft, setTimeLeft] = useState(600);
+  const [timeLeft, setTimeLeft] = useState(180); // 3 minutes
   const [loading, setLoading] = useState(false);
   const [resending, setResending] = useState(false);
   const [error, setError] = useState('');
@@ -77,7 +77,7 @@ const VerificationBanner = ({ onVerified }) => {
     try {
       const res = await api.resendOTP();
       if (res.status === 'success') {
-        setTimeLeft(600);
+        setTimeLeft(180);
         setExpired(false);
         setOtp(['', '', '', '', '', '']);
         setSuccess('New code sent!');

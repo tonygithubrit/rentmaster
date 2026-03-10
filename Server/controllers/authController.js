@@ -36,7 +36,7 @@ const transporter = nodemailer.createTransport({
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 480px; margin: 0 auto; padding: 32px; background: #f8fafc; border-radius: 12px;">
         <h2 style="color: #0f172a; margin-bottom: 8px;">Hi ${name} 👋</h2>
-        <p style="color: #64748b; margin-bottom: 24px;">Use the code below to verify your email address. It expires in <strong>10 minutes</strong>.</p>
+        <p style="color: #64748b; margin-bottom: 24px;">Use the code below to verify your email address. It expires in <strong>3 minutes</strong>.</p>
         <div style="background: #fff; border: 2px dashed #3b82f6; border-radius: 12px; padding: 24px; text-align: center; margin-bottom: 24px;">
           <span style="font-size: 40px; font-weight: 800; letter-spacing: 10px; color: #2563eb;">${otp}</span>
         </div>
