@@ -33,7 +33,7 @@ const transporter = nodemailer.createTransport({
 });
 
   await transporter.sendMail({
-    from: `"RentalMS" <${process.env.EMAIL_USER}>`,
+    from: `"RentalMS" <teejayilah@gmail.com>`,
     to: email,
     subject: '🔐 Verify Your Email — RentalMS',
     html: `
