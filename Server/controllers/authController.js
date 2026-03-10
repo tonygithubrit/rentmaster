@@ -19,13 +19,15 @@ const generateOTP = () => {
 
 // ─── Send verification email ─────────────────────────────────────────────────
 const sendVerificationEmail = async (email, name, otp) => {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS
-    }
-  });
+const transporter = nodemailer.createTransport({
+  host: 'smtp-relay.brevo.com',
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
 
   await transporter.sendMail({
     from: `"RentalMS" <${process.env.EMAIL_USER}>`,
@@ -58,7 +60,7 @@ export const register = async (req, res) => {
 
     // Generate OTP
     const otp = generateOTP();
-    const otpExpires = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
+    const otpExpires = new Date(Date.now() + 3 * 60 * 1000); // 3 minutes
 
     // Validate access code for tenants
     if (role === 'tenant') {
@@ -165,7 +167,7 @@ export const resendOTP = async (req, res) => {
 
     const otp = generateOTP();
     user.emailOTP = otp;
-    user.emailOTPExpires = new Date(Date.now() + 10 * 60 * 1000);
+    user.emailOTPExpires = new Date(Date.now() + 3 * 60 * 1000);
     await user.save();
 
     try { await sendVerificationEmail(user.email, user.name, otp); } catch (e) { console.error('Email error FULL:', e.message, e.code, e.response); }
@@ -195,7 +197,7 @@ export const login = async (req, res) => {
     if (!user.isEmailVerified) {
       const otp = generateOTP();
       user.emailOTP = otp;
-      user.emailOTPExpires = new Date(Date.now() + 10 * 60 * 1000);
+      user.emailOTPExpires = new Date(Date.now() + 3 * 60 * 1000);
       await user.save();
       try { await sendVerificationEmail(user.email, user.name, otp); } catch (e) { console.error('Email error FULL:', e.message, e.code, e.response); }
     }
@@ -351,7 +353,7 @@ export const changeEmail = async (req, res) => {
     user.email = email;
     user.isEmailVerified = false;
     user.emailOTP = otp;
-    user.emailOTPExpires = new Date(Date.now() + 10 * 60 * 1000);
+    user.emailOTPExpires = new Date(Date.now() + 3 * 60 * 1000);
     await user.save();
 
     try { await sendVerificationEmail(email, user.name, otp); } catch (e) { console.error('Email error:', e.message); }

@@ -104,9 +104,11 @@ const AuthPage = () => {
           return;
         }
 
+        localStorage.setItem('token', result.data.token);
+        localStorage.setItem('userRole', result.data.user.role);
+        localStorage.setItem('userEmail', result.data.user.email);
         localStorage.setItem('isEmailVerified', String(result.data.user.isEmailVerified));
         navigate(`/dashboard/${result.data.user.role}`);
-
       } else {
         const userData = {
           name: formData.name,
@@ -134,6 +136,9 @@ const AuthPage = () => {
           return;
         }
 
+        localStorage.setItem('token', result.data.token);
+        localStorage.setItem('userRole', result.data.user.role);
+        localStorage.setItem('userEmail', result.data.user.email);
         localStorage.setItem('isEmailVerified', String(result.data.user.isEmailVerified));
         navigate(`/dashboard/${result.data.user.role}`);
       }
